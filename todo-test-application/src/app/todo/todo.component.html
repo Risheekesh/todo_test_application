@@ -1,0 +1,36 @@
+<section class="todoapp row">
+    <section class="header col-sm-7 col-md-9 col-xs-12">
+        <div class="todo-input">
+          <input autofocus="" class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
+        </div>
+        <div class="inpit-radio">
+          <label class="color-radio">
+            <input name="radio" type="radio" value="red" [(ngModel)]="newTodo.color">
+            <span class="checkmark"></span>Red
+          </label>
+          <label class="color-radio">
+            <input name="radio" type="radio" value="green" [(ngModel)]="newTodo.color">
+            <span class="checkmark"></span>Green
+          </label>
+          <label class="color-radio">
+            <input name="radio" type="radio" value="blue" [(ngModel)]="newTodo.color">
+            <span class="checkmark"></span>Blue
+          </label>
+        </div>
+    </section>
+
+  <section  class="main col-sm-5 col-md-3 col-xs-12">
+      <ul  class="todo-list">
+        <li *ngFor="let todo of todos" class="single-todo">
+          <div  class="view">
+            <label >{{todo.title}}</label>
+            <button  class="destroy" (click)="removeTodo(todo)">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <span  class="dot" [ngClass]="todo.color"></span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+</section>

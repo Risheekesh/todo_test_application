@@ -1,0 +1,133 @@
+.header {
+    border: 3px solid #e4e2e2;
+}
+.todoapp{
+    margin: 0;
+}
+.todo-input {
+    display: flex;
+}
+.new-todo {
+    margin: auto;
+    text-align: center;
+    min-width: 230px;
+    max-width: 550px;
+    padding: 16px 16px 16px 60px;
+    border: none;
+    background: rgba(0, 0, 0, 0.003);
+    -webkit-box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+    box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+}
+.new-todo, .edit {
+    position: relative;
+    width: 100%;
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: 1.4em;
+    border: 0;
+    color: inherit;
+    padding: 6px;
+    border: 1px solid #999;
+    -webkit-box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.inpit-radio {
+    padding: 15px;
+    margin: auto;
+    text-align: center;
+}
+
+.color-radio {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.color-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.color-radio:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.color-radio input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.color-radio input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.color-radio .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+.main {
+    padding: 0;
+}
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+.single-todo {
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    border: 3px solid #f5f4f4;
+}
+.single-todo button {
+    cursor: pointer;
+    float: right;
+}
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    float: right;
+    margin-right: 14px;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
