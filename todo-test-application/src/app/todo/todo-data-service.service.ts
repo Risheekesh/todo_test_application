@@ -11,7 +11,7 @@ export class TodoDataService {
     if (localStorage.getItem("todos")) {
       let todosString=localStorage.getItem("todos");
       this.todos=JSON.parse(todosString);
-      this.lastId=this.todos.slice(-1).pop().id;
+      this.lastId=(this.todos.length)?this.todos.slice(-1).pop().id:0;
     }
   }
 

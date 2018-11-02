@@ -1,5 +1,6 @@
 .header {
     border: 3px solid #e4e2e2;
+    float: left;
 }
 .todoapp{
     margin: 0;
@@ -99,6 +100,7 @@
 }
 .main {
     padding: 0;
+    float: left;
 }
 .todo-list {
     list-style-type: none;
@@ -107,6 +109,7 @@
 .single-todo {
     margin-bottom: 5px;
     padding: 5px 10px;
+    min-height: 62px;
     border: 3px solid #f5f4f4;
 }
 .single-todo button {
@@ -131,3 +134,24 @@
 .blue {
     background-color: blue;
 }
+
+.custom-col-66per{
+    width: 66.66%;
+    float: left;
+}
+.custom-col-33per{
+    width: 33.33%;
+    float: left;
+}
+
+@media screen and (max-width: 1024px) {
+    .single-todo{
+        min-height: 129px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .custom-col-66per,.custom-col-33per{
+        width: 100%;
+        float: left;
+    }
+  }

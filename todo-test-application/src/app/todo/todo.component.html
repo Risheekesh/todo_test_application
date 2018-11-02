@@ -1,5 +1,5 @@
-<section class="todoapp row">
-    <section class="header col-sm-7 col-md-9 col-xs-12">
+<section class="todoapp">
+    <section class="header custom-col-66per">
         <div class="todo-input">
           <input autofocus="" class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
         </div>
@@ -18,19 +18,14 @@
           </label>
         </div>
     </section>
-
-  <section  class="main col-sm-5 col-md-3 col-xs-12">
-      <ul  class="todo-list">
-        <li *ngFor="let todo of todos" class="single-todo">
-          <div  class="view">
-            <label >{{todo.title}}</label>
-            <button  class="destroy" (click)="removeTodo(todo)">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <span  class="dot" [ngClass]="todo.color"></span>
-          </div>
-        </li>
-      </ul>
-    </section>
+    <div *ngFor="let todo of todos" class="single-todo main custom-col-33per">
+      <div  class="view">
+        <label >{{todo.title}}</label>
+        <button  class="destroy" (click)="removeTodo(todo)">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <span  class="dot" [ngClass]="todo.color"></span>
+      </div>
+    </div>
 
 </section>
